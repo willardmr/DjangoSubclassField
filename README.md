@@ -27,10 +27,9 @@ p.topping_type == type(s) #Returns True
 #PLEASE NOTE
 p.topping_type = Pepperoni
 p.save()
-p.topping_type #This will return 'Pepperoni', the class name as text
+p.topping_type #This will return 'Pepperoni', the class name as a string
 p.refresh_from_db() #But when we refresh from the database...
 p.topping_type #This will return Pepperoni, the class object
 #This weird behavior is due to django not refreshing the object from the database when it is saved
 ```
 This field is defined with a custom widget that will display all subclases of the given superclass in a ChoiceField.
-
